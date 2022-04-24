@@ -1,0 +1,710 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVEGACION INDEX */
+.contenedor {
+        
+        display: grid;
+        grid-template-columns: 25% auto 25% 20%;
+        grid-template-rows: 110px 500px 170px;
+        grid-template-areas: "firma nav nav redes"
+                             "main main info info" 
+                             "footer footer footer footer" ;
+        box-sizing: border-box;
+
+}
+
+.navegacion{
+    grid-area: nav;
+    display: flex;
+    justify-content:center;
+    background-color:white;
+}
+
+.navegacion ul{
+    list-style: none;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navegacion ul li{
+    display: inline-block;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: peru;
+}
+
+.redes{
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redes img{
+    width: 25px;
+    height: 25px;
+    padding: 8px;
+}
+
+.firma{
+    grid-area: firma;
+    font-size: 30px;
+    color: peru;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation-name: ff;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    }
+    
+    @keyframes ff {
+        0%{
+            transform: translate(0px, 0px);
+        }
+        25%{
+            transform: translate(10px,10px);
+        }
+    }
+
+.mainIndex{
+    grid-area: main;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    background-color:beige;
+}
+
+.infoIndex{
+    grid-area: info;
+    color: peru;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 40px;
+    font-family: 'Ms Madi', cursive;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 35px;
+    background-color:beige;
+    }
+
+.infoIndex h2{
+    padding: 15px;
+}
+
+.infoIndex h3{
+    padding: 15px;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width:320px){
+    .contenedor {
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 50px 40px 220px auto auto;
+        grid-template-areas: "firma firma"
+                             "nav   nav" 
+                             "redes redes" 
+                             "main  main"
+                             "info  info"
+                             "footer footer";
+        box-sizing: border-box;
+    }
+
+   .navegacion ul li{
+    font-size: 10px;
+    }
+
+    .firma{
+        font-size: 15px;
+    }
+
+    .redes img{
+        width: 15px;
+        height: 15px;
+        padding: 8px;
+    }
+
+    .infoIndex h2{
+        padding:   5px;
+        font-size: 10px;
+    }
+    .infoIndex h3{
+        padding:   5px;
+        font-size: 9px;
+    }
+    .infoIndex h4{
+        font-size: 8px;
+    }
+    
+    .infoIndex{
+        padding: 15px;
+        line-height: 15px;
+    }     
+
+    .footer{
+        padding: 10px;
+    }
+    .footer h3{
+        font-size: 10px;
+    }
+    .footer p{
+        font-size: 10px;
+    }
+    .footer span{
+        font-size: 10px;
+    }
+    .footer a{
+        font-size: 10px;
+    }
+
+}
+
+/* NAVEGACION GENERAL */
+
+.contenedorGral {
+        
+    display: grid;
+    grid-template-columns: 25% auto 25% 20%;
+    grid-template-rows: 110px;
+    grid-template-areas: "firma nav nav redes";
+    box-sizing: border-box;
+}
+
+.navegacionGral{
+grid-area: nav;
+display: flex;
+justify-content:center;
+background-color:white;
+}
+
+.navegacionGral ul{
+list-style: none;
+width: 600px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.navegacionGral ul li{
+    display: flex;
+    display: inline-block;
+    font-size: 18px;
+    align-items: center;
+}
+
+a{
+text-decoration: none;
+color: peru;
+}
+
+.redesGral{
+grid-area: redes;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.redesGral img{
+width: 25px;
+height: 25px;
+padding: 8px;
+}
+
+.firmaGral{
+grid-area: firma;
+font-size: 30px;
+color: peru;
+display: flex;
+justify-content: space-around;
+align-items: center;
+animation-name: ff;
+animation-duration: 2s;
+animation-iteration-count: 1;
+animation-delay: 1s;
+}
+
+@keyframes ff {
+    0%{
+        transform: translate(opx, 0px);
+    }
+    25%{
+        transform: translate(10px,10px);
+    }
+}
+
+
+
+@media (max-width:320px){
+    .contenedorGral {
+        
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 50px 40px;
+        grid-template-areas: "firma"
+                             "nav" 
+                             "redes";
+        box-sizing: border-box;
+    }
+
+   .navegacionGral ul li{
+    font-size: 10px;
+    }
+
+    .firmaGral{
+        font-size: 15px;
+    }   
+
+    .redesGral img{
+        width: 15px;
+        height: 15px;
+        padding: 8px;
+    }
+
+}
+
+/* MAIN CONTACTO */
+
+.mainContacto{
+
+    display: grid;
+    grid-template-columns:  100%;
+    grid-template-rows:  1200px;
+    grid-template-areas: "mainC";
+    background-image: url(../img/bosque.jpg);
+}
+
+.mainContacto{
+    grid-area: mainC;
+    display: flex;
+    box-sizing: border-box;
+    background-size: cover;
+    padding: 50px;
+}
+
+
+.mainContacto__parrafo{
+    width: 60%;
+    color: beige;
+    padding: 50px;
+}
+
+.mainContacto__parrafo h2{
+    font-family: 'Ms Madi', cursive;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 15px;
+}
+
+.mainContacto__parrafo h3{
+    font-family: 'Ms Madi', cursive;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.mainContacto__formulario label{
+    color: white;
+    font-family: 'Ms Madi', cursive;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+
+
+@media (max-width:320px){
+
+    .mainContacto{
+
+        display: grid;
+        grid-template-columns:  100%;
+        grid-template-rows:  120px 300px;
+        grid-template-areas: "mainC"
+                             "mainC2";
+        background-image: url(../img/bosque.jpg);
+        padding: 10px;
+    }
+
+    .mainContacto__parrafo{
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .mainContacto__parrafo h2{
+        font-family: 'Ms Madi', cursive;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        padding: 5px;
+        font-size: 10px;
+    }
+    
+    .mainContacto__parrafo h3{
+        font-family: 'Ms Madi', cursive;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 10px;
+    }
+    
+    .mainContacto__formulario label{
+        color: white;
+        font-family: 'Ms Madi', cursive;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 10px;
+    }
+
+}
+
+/* FOOTER CONTACTO */
+
+.footer{
+    grid-area: footer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* MAIN BLOG */
+
+.mainBlog {
+    display: grid;
+    gap: 55px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px;
+    grid-template-areas: "im1b im2b "
+                         "im3b im4b" ;
+    box-sizing: border-box;
+    padding: 55px;
+    background-color:beige;
+}
+
+.foto1b{
+    grid-area: im1b;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto1b:hover{
+    transform: translate(10px, 10px);
+}
+
+.foto2b{
+    grid-area: im2b;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto2b:hover{
+    transform: translate(10px, 10px);
+}
+
+.foto3b{
+    grid-area: im3b;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto3b:hover{
+    transform: translate(10px, 10px);
+}
+
+.foto4b{
+    grid-area: im4b;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto4b:hover{
+    transform: translate(10px, 10px);
+}
+
+@media (max-width:320px){
+
+    .mainBlog {
+
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-template-areas: "im1b"
+                             "im2b"
+                             "im3b"
+                             "im4b" ;
+        padding: 15px;
+    }
+
+}
+
+
+
+/* QUIENES SOMOS MAIN */
+
+.mainQuienesSomos {
+    display: grid;
+    gap: 55px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 600px ;
+    grid-template-areas: "ima1 main ima2 " ;
+    box-sizing: border-box;
+    padding: 55px;
+    background-color:beige;
+}
+
+.fotoQS1{
+
+    grid-area: ima1;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+
+}
+
+.mainQS{
+grid-area: main;
+color: peru;
+display: flex;
+flex-direction: column;
+align-items: center;
+line-height: 25px;
+font-family: 'Ms Madi', cursive;
+font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.mainQS h2{
+    padding: 15px;
+}
+
+.mainQS h3{
+    padding: 15px;
+}
+.mainQS h4{
+    padding: 15px;
+}
+
+.fotoQS2{
+
+    grid-area: ima2;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    font-style: oblique;
+}
+
+
+@media (max-width:320px){
+.mainQuienesSomos {
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto 200px ;
+    grid-template-areas: "ima1"
+                         "main"
+                         "ima2";
+    gap: 20px;
+    padding: 15px;
+}
+
+.mainQS h2{
+    font-size: 10px;
+    padding: 10px;
+}
+
+.mainQS h3{
+    font-size: 10px;
+    padding: 10px;
+}
+.mainQS h4{
+    font-size: 10px;
+    padding: 10px;
+}
+
+
+}
+
+
+/* MAIN OFERTA */
+
+.mainOferta {
+    display: grid;
+    gap: 55px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas: "im1  texto1  im2  texto2 "
+                         "im3  texto3  im4  texto4" 
+                         "im5  texto5  im6  texto6"
+                         "im7  texto7  im8  texto8" ;
+    box-sizing: border-box;
+    padding: 55px;
+    background-color:beige;
+}
+
+.mainOferta h2{
+    padding: 5px;
+}
+
+.mainOferta h3{
+    padding: 5px;
+}
+.mainOferta h4{
+    padding: 5px;
+}
+
+.foto1Of{
+    grid-area: im1;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto1Of:hover{
+    transform: scale(1.1);
+}
+
+.mainOferta_texto1{
+    grid-area: texto1;
+
+}
+.foto2Of{
+    grid-area: im2;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto2Of:hover{
+    transform: scale(1.1);
+}
+
+.mainOferta_texto2{
+    grid-area: texto2;
+}
+.foto3Of{
+    grid-area: im3;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto3Of:hover{
+    transform: scale(1.1);
+}
+
+.mainOferta_texto3{
+    grid-area: texto3;
+}
+.foto4Of{
+    grid-area: im4;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto4Of:hover{
+    transform: scale(1.1);
+}
+.mainOferta_texto4{
+    grid-area: texto4;
+}
+.foto5Of{
+    grid-area: im5;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto5Of:hover{
+    transform: scale(1.1);
+}
+.mainOferta_texto5{
+    grid-area: texto5;
+}
+.foto6Of{
+    grid-area: im6;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto6Of:hover{
+    transform: scale(1.1);
+}
+
+.mainOferta_texto6{
+    grid-area: texto6;
+}
+.foto7Of{
+    grid-area: im7;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto7Of:hover{
+    transform: scale(1.1);
+}
+
+.mainOferta_texto7{
+    grid-area: texto7;
+}
+.foto8Of{
+    grid-area: im8;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto8Of:hover{
+    transform: scale(1.1);
+}
+
+.mainOferta_texto8{
+    grid-area: texto8;
+}
+
+@media (max-width:320px){
+    .mainOferta {
+        gap: 15px;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 200px 200px 200px 200px 200px 200px 200px 200px;
+        grid-template-areas:    "im1  texto1"
+                                "im2  texto2"
+                                "im3  texto3"  
+                                "im4  texto4"
+                                "im5  texto5"
+                                "im6  texto6 "
+                                "im7  texto7"  
+                                "im8  texto8";
+        padding: 10px;
+    }
+
+.mainOferta h2{
+    font-size: 12px;
+    padding: 5px;
+}
+
+.mainOferta h3{
+    font-size: 10px;
+    padding: 5px;
+}
+.mainOferta h4{
+    font-size: 13px;
+    padding: 5px;
+}
+
+}
+
+
+
