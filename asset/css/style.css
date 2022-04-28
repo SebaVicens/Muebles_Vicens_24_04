@@ -9,7 +9,7 @@
         
         display: grid;
         grid-template-columns: 25% auto 25% 20%;
-        grid-template-rows: 110px 500px 170px;
+        grid-template-rows: 110px auto auto;
         grid-template-areas: "firma nav nav redes"
                              "main main info info" 
                              "footer footer footer footer" ;
@@ -51,8 +51,8 @@ a{
 }
 
 .redes img{
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     padding: 8px;
 }
 
@@ -226,8 +226,8 @@ align-items: center;
 }
 
 .redesGral img{
-width: 25px;
-height: 25px;
+width: 40px;
+height: 40px;
 padding: 8px;
 }
 
@@ -455,7 +455,7 @@ animation-delay: 1s;
 
 
 /* QUIENES SOMOS MAIN */
-
+/*
 .mainQuienesSomos {
     display: grid;
     gap: 55px;
@@ -533,7 +533,14 @@ font-family: 'Plus Jakarta Sans', sans-serif;
 
 
 }
+*/
 
+
+/* QUIENES SOMOS MAIN */
+
+h2 {color: peru;}
+h3 {color: peru;}
+h4 {color: peru;}
 
 /* MAIN OFERTA */
 
