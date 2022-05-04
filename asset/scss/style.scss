@@ -1,0 +1,110 @@
+@import "_blog";
+@import "_contactos";
+@import "_index"; 
+@import "_quienesSomos";
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+.contenedorGral {
+        
+    display: grid;
+    grid-template-columns: 25% auto 25% 20%;
+    grid-template-rows: 110px;
+    grid-template-areas: "firma nav nav redes";
+    box-sizing: border-box;
+    background-color:white;
+}
+
+.navegacionGral{
+grid-area: nav;
+display: flex;
+justify-content:center;
+background-color:white;
+}
+
+.navegacionGral ul{
+list-style: none;
+width: 600px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.navegacionGral ul li{
+    display: flex;
+    display: inline-block;
+    font-size: 18px;
+    align-items: center;
+}
+
+a{
+text-decoration: none;
+color: peru;
+}
+
+.redesGral{
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redesGral img{
+    padding: 8px;
+}
+
+.firmaGral{
+grid-area: firma;
+font-size: 30px;
+color: peru;
+display: flex;
+justify-content: space-around;
+align-items: center;
+animation-name: ff;
+animation-duration: 2s;
+animation-iteration-count: 1;
+animation-delay: 1s;
+}
+
+@keyframes ff {
+    0%{
+        transform: translate(opx, 0px);
+    }
+    25%{
+        transform: translate(10px,10px);
+    }
+}
+
+
+
+@media (max-width:320px){
+    .contenedorGral {
+        
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 50px 40px;
+        grid-template-areas: "firma"
+                             "nav" 
+                             "redes";
+        box-sizing: border-box;
+    }
+
+   .navegacionGral ul li{
+    font-size: 10px;
+    }
+
+    .firmaGral{
+        font-size: 15px;
+    }   
+
+    .redesGral img{
+        width: 15px;
+        height: 15px;
+        padding: 8px;
+    }
+
+}

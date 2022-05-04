@@ -1,0 +1,70 @@
+.mainBlog {
+    display: grid;
+    gap: 55px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px;
+    grid-template-areas: "im1b im2b "
+                         "im3b im4b" ;
+    box-sizing: border-box;
+    padding: 55px;
+    background-color:beige;
+}
+
+.foto1b{
+    grid-area: im1b;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto1b:hover{
+    transform: translate(10px, 10px);
+}
+
+.foto2b{
+    grid-area: im2b;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto2b:hover{
+    transform: translate(10px, 10px);
+}
+
+.foto3b{
+    grid-area: im3b;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto3b:hover{
+    transform: translate(10px, 10px);
+}
+
+.foto4b{
+    grid-area: im4b;
+    background-image: url("../img/muebleLuz.jpg");
+    background-size: cover;
+    transition: 2s;
+}
+
+.foto4b:hover{
+    transform: translate(10px, 10px);
+}
+
+@media (max-width:320px){
+
+    .mainBlog {
+
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-template-areas: "im1b"
+                             "im2b"
+                             "im3b"
+                             "im4b" ;
+        padding: 15px;
+    }
+
+}

@@ -1,0 +1,85 @@
+.mainContacto{
+
+    display: grid;
+    grid-template-columns:  100%;
+    grid-template-rows:  1200px;
+    grid-template-areas: "mainC";
+    background-image: url(../img/bosque.jpg);
+    font-family: 'Ms Madi', cursive;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.mainContacto{
+    grid-area: mainC;
+    display: flex;
+    box-sizing: border-box;
+    background-size: cover;
+    padding: 50px;
+}
+
+
+.mainContacto__parrafo{
+    width: 60%;
+    color: beige;
+    padding: 50px;
+}
+
+.mainContacto__parrafo h2{
+    padding: 15px;
+}
+
+.mainContacto__formulario label{
+    color: white;
+
+}
+
+@media (max-width:320px){
+
+    .mainContacto{
+
+        display: grid;
+        grid-template-columns:  100%;
+        grid-template-rows:  120px 300px;
+        grid-template-areas: "mainC"
+                             "mainC2";
+        background-image: url(../img/bosque.jpg);
+        padding: 10px;
+    }
+
+    .mainContacto__parrafo{
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .mainContacto__parrafo h2{
+        font-family: 'Ms Madi', cursive;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        padding: 5px;
+        font-size: 10px;
+    }
+    
+    .mainContacto__parrafo h3{
+        font-family: 'Ms Madi', cursive;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 10px;
+    }
+    
+    .mainContacto__formulario label{
+        color: white;
+        font-family: 'Ms Madi', cursive;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 10px;
+    }
+
+}
+
+/* FOOTER CONTACTO */
+
+.footer{
+    grid-area: footer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}

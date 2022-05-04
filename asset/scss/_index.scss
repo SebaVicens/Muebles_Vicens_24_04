@@ -1,0 +1,170 @@
+.contenedor {
+        
+    display: grid;
+    grid-template-columns: 25% auto 25% 20%;
+    grid-template-rows: 110px auto auto;
+    grid-template-areas: "firma nav nav redes"
+                         "main main info info" 
+                         "footer footer footer footer" ;
+    box-sizing: border-box;
+}
+
+.navegacion{
+grid-area: nav;
+display: flex;
+justify-content:center;
+background-color:white;
+}
+
+.navegacion ul{
+list-style: none;
+width: 600px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.navegacion ul li{
+display: inline-block;
+font-size: 18px;
+}
+
+a{
+text-decoration: none;
+color: peru;
+}
+
+.redes{
+grid-area: redes;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.redes img{
+padding: 8px;
+}
+
+.firma{
+grid-area: firma;
+font-size: 30px;
+color: peru;
+display: flex;
+justify-content: space-around;
+align-items: center;
+animation-name: ff;
+animation-duration: 2s;
+animation-iteration-count: 1;
+animation-delay: 1s;
+}
+
+@keyframes ff {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    25%{
+        transform: translate(10px,10px);
+    }
+}
+
+.mainIndex{
+grid-area: main;
+background-image: url("../img/muebleLuz.jpg");
+background-size: cover;
+background-color:beige;
+}
+
+.infoIndex{
+grid-area: info;
+color: peru;
+display: flex;
+flex-direction: column;
+align-items: center;
+line-height: 40px;
+font-family: 'Ms Madi', cursive;
+font-family: 'Plus Jakarta Sans', sans-serif;
+padding: 35px;
+background-color:beige;
+}
+
+.infoIndex h2{
+padding: 15px;
+}
+
+.infoIndex h3{
+padding: 15px;
+}
+
+.footer{
+grid-area: footer;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+@media (max-width:320px){
+.contenedor {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 40px 220px auto auto;
+    grid-template-areas: "firma firma"
+                         "nav   nav" 
+                         "redes redes" 
+                         "main  main"
+                         "info  info"
+                         "footer footer";
+    box-sizing: border-box;
+}
+
+.navegacion ul li{
+font-size: 10px;
+}
+
+.firma{
+    font-size: 15px;
+}
+
+.redes img{
+    width: 15px;
+    height: 15px;
+    padding: 8px;
+}
+
+.infoIndex h2{
+    padding:   5px;
+    font-size: 10px;
+}
+.infoIndex h3{
+    padding:   5px;
+    font-size: 9px;
+}
+.infoIndex h4{
+    font-size: 8px;
+}
+
+.infoIndex{
+    padding: 15px;
+    line-height: 15px;
+}     
+
+.footer{
+    padding: 10px;
+}
+.footer h3{
+    font-size: 10px;
+}
+.footer p{
+    font-size: 10px;
+}
+.footer span{
+    font-size: 10px;
+}
+.footer a{
+    font-size: 10px;
+}
+
+}
